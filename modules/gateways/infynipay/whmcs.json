@@ -1,0 +1,32 @@
+{
+  "schema": "1.0",
+  "type": "whmcs-gateways",
+  "name": "infynipay",
+  "version": "1.3.0",
+  "license": "proprietary",
+  "category": "payment-gateways",
+  "description": {
+    "name": "InfyniPay",
+    "tagline": "One payment integration for WHMCS. Connect 30+ providers and switch between them without changing your store.",
+    "long": "InfyniPay connects WHMCS to 30+ payment providers through a single module. You pick the active provider in the InfyniPay dashboard and WHMCS keeps working unchanged, so changing provider needs no reinstall and no reconfiguration.\n\nCard details are entered on your provider's own certified payment page. They never pass through InfyniPay or your WHMCS server. Activation runs over OAuth 2.0 and creates separate sandbox and live apps, so you can test before going live.\n\nOne-time invoices and recurring subscriptions are both supported. Where a provider supports payment agreements, WHMCS renewal invoices are charged automatically and failures are reported back through the standard WHMCS callback, so your existing retry and suspension rules still apply.\n\nInfyniPay charges no percentage and no per-transaction fee. You pay only the processing fees set by your chosen provider.",
+    "features": [
+      "Connect 30+ payment providers through one WHMCS module",
+      "Change provider from the InfyniPay dashboard with no WHMCS changes",
+      "Automatic renewals - WHMCS subscription invoices charged via provider agreements",
+      "Card data entered on the provider's certified page, never on your server",
+      "OAuth 2.0 activation with separate sandbox and live apps",
+      "Refunds from the WHMCS admin area, plus a InfyniPay transactions report",
+      "No percentage or per-transaction fees from InfyniPay",
+      "Compatible with WHMCS 8.0 and later"
+    ]
+  },
+  "logo": {
+    "filename": "infynipay-logo.png"
+  },
+  "authors": [
+    {
+      "name": "InfyniPay",
+      "homepage": "https://www.infynipay.com/about/"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+.infynipay-profiles-container {
+    margin-bottom: 40px;
+}
+
+/* Applied when a InfyniPay payment is in-flight for this invoice */
+.infynipay-credit-blocked {
+    display: none !important;
+}
+
+/* Applied to payment method options when switching is locked */
+.infynipay-method-locked {
+    pointer-events: none !important;
+    opacity: 0.4 !important;
+    cursor: not-allowed !important;
+}
+
+.infynipay-method-locked-notice {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #856404;
+}
+
+.infynipay-profiles-title {
+    /* Styles handled by alert alert-info classes from theme */
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.infynipay-profiles-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, max-content));
+    justify-content: center;
+    gap: 10px;
+}
+
+.infynipay-profile-item {
+    background: white;
+    border: 1px #ccc solid;
+    border-radius: 20px;
+    padding: 0 10px;
+    cursor: default;
+    text-align: center;
+    user-select: none;
+    pointer-events: none;
+}
+
+.infynipay-profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.infynipay-profile-icon {
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.infynipay-profile-icon img {
+    height: 19px;
+}
+
+/* Built-in card icon, shown when no artwork comes back from the API. */
+.infynipay-profile-icon svg.infynipay-builtin-card {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+/* Built-in card icon, shown when no artwork comes back from the API. */
+.infynipay-profile-icon svg.infynipay-builtin-card {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.infynipay-profile-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+.infynipay-profile-type {
+    font-size: 11px;
+    color: #666;
+    display: none;
+}
+
+.infynipay-profiles-loading {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    font-style: italic;
+    /* Prevent layout shift during loading if possible */
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Delay showing loading text to avoid flash on fast connections/cache */
+    opacity: 0;
+    animation: infynipay-fade-in 0.3s ease 0.15s forwards;
+}
+
+.infynipay-profiles-error {
+    padding: 10px;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    color: #856404;
+    text-align: center;
+}
+
+/* Ensure our own content fades in smoothly - but only on first appearance */
+.infynipay-profiles-container:not(.infynipay-animated),
+#infynipay-checkout-message:not(.infynipay-animated) {
+    animation: infynipay-fade-in 0.3s ease-out;
+}
+
+/* Mark as animated to prevent re-triggering on subsequent shows */
+.infynipay-profiles-container.infynipay-animated,
+#infynipay-checkout-message.infynipay-animated {
+    /* No animation on subsequent shows */
+}
+
+@keyframes infynipay-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/******* For lagom-futuristic theme *******/
+.lagom-futuristic .infynipay-profiles-container {
+    margin-bottom: 0;
+}
+.lagom-futuristic #infynipay-section{
+    padding: 20px;
+    background: var(--ui-block-bg-form);
+    margin-bottom: var(--ui-block-spacing-lg);
+    border: var(--panel-border);
+    border-radius: var(--panel-border-radius);
+    box-shadow: var(--panel-box-shadow);
+}
+.lagom-futuristic .infynipay-profile-item{
+    border: none;
+}
+.lagom-futuristic .infynipay-profiles-loading{
+    color: white !important;
+}
+.lagom-futuristic .infynipay-profiles-list {
+    justify-content: start;
+}
